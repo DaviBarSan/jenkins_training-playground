@@ -1,13 +1,13 @@
 pipeline {
-    parameters {
-                    string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Users name')
-		    string(name: 'AGE', defaultValue: 'Mr Jenkins', description: 'Users age')
-                }
     agent { 
 		docker { 
 			image 'alpine:latest' 
 		}
 	}
+     parameters {
+                    string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Users name')
+		    string(name: 'AGE', defaultValue: 'Mr Jenkins', description: 'Users age')
+                }
     stages {
         stage('build') {
             }
