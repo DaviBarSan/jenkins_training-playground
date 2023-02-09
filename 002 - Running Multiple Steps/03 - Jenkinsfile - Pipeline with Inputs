@@ -10,8 +10,7 @@ pipeline {
                 }
     stages {
         stage('build') {
-            }
-	    steps{
+	        steps{
                 echo "$NAME"
                 echo "$AGE"
             }
