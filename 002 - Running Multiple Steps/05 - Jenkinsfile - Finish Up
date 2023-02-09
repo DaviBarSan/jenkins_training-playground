@@ -11,4 +11,15 @@ pipeline {
             }
         }
     }
+    post{
+        always{
+            print 'This was the following result:'
+        }
+        success{
+            echo 'SUCCESS!!!'
+        }
+        unsuccess{
+            echo 'TRY IT AGAIN'
+        }
+    }
 }
