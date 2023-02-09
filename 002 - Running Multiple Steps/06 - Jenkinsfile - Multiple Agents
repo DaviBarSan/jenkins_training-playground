@@ -2,7 +2,7 @@ pipeline {
     agent none
     stages {
         stage('Maven') {
-            agent { docker 'maven:3.8.7-eclipse-temurin-11' } 
+            agent { docker 'maven:latest' } 
             steps {
                 echo 'Hello, Maven'
                 sh 'mvn --version'
