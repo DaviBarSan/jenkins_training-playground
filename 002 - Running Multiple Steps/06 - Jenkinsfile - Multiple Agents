@@ -9,7 +9,7 @@ pipeline {
             }
         }
         stage('Npm') {
-            agent { docker 'apline:latest' } 
+            agent { docker 'node:latest' } 
             steps {
                 echo 'Hello NPM'
                 sh 'npm --version'
