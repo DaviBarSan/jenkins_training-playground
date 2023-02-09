@@ -5,12 +5,19 @@ pipeline {
 		}
 	}
 	parameters {	 
-		choice(name: 'CHOICE', choices: ['build', 'test'], description: 'Pick a stage')
+		choice(	name: 'CHOICE', 
+			choices: ['build', 'test'], 
+			description: 'Pick a stage')
 		}
     stages {
+    	when(	
+	                expression { params.CHOICE == 'build' }
+	)
     	stage('build'){
+		print 'Building this stuff'
 	}
 	stage('test'){
+		print 'Testing this stuff'
 	}
     }
 }
