@@ -4,6 +4,13 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
+	parameters {	 
+		choice(name: 'CHOICE', choices: ['build', 'test'], description: 'Pick a stage')
+		}
     stages {
+    	stage('build'){
+	}
+	stage('test'){
+	}
     }
 }
