@@ -1,7 +1,5 @@
 pipeline {
-    input {
-                message "What is your Name? And your age?"
-                parameters {
+    parameters {
                     string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Users name')
 		    string(name: 'AGE', defaultValue: 'Mr Jenkins', description: 'Users age')
                 }
