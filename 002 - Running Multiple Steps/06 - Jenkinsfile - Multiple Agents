@@ -1,9 +1,19 @@
 pipeline {
-    agent { 
-		docker { 
-			image 'alpine:latest' 
-		}
-	}
+    agent none
     stages {
+        stage('Maven') {
+            agent { docker 'maven:3.8.7-eclipse-temurin-11' } 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+        stage('Npm') {
+            agent { docker 'npm:latest' } 
+            steps {
+                echo 'Hello NPM'
+                sh 'npm --version'
+            }
+        }
     }
 }
