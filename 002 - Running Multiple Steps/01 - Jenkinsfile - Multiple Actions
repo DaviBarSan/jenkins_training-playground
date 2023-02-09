@@ -4,12 +4,14 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
-    stages('build'){
-    	steps{
-		sh 'date > currDate.txt | cat curDate.txt'
-		sh 'sh sleep 10s'
-		sh 'cat currDate.txt'
+    stages{
+	stage('build'){    
+    		steps{
+			sh 'date > currDate.txt | cat curDate.txt'
+			sh 'sh sleep 10s'
+			sh 'cat currDate.txt'
 		
+		}
 	}
     }
 }
