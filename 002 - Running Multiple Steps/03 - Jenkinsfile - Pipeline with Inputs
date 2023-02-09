@@ -1,4 +1,10 @@
 pipeline {
+    input {
+                message "What is your Name? And your age?"
+                parameters {
+                    string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Users name')
+		    string(name: 'AGE', defaultValue: 'Mr Jenkins', description: 'Users age')
+                }
     agent { 
 		docker { 
 			image 'alpine:latest' 
@@ -6,12 +12,6 @@ pipeline {
 	}
     stages {
         stage('build') {
-            input {
-                message "What is your Name? And your age?"
-                parameters {
-                    string(name: 'NAME', defaultValue: 'Mr Jenkins', description: 'Users name')
-		    string(name: 'AGE', defaultValue: 'Mr Jenkins', description: 'Users age')
-                }
             }
 	    
 	    steps {
