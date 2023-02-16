@@ -5,8 +5,8 @@ pipeline {
 		filename '02 - Dockerfile - Dockerfile Agent'
 		additionalBuildArgs '--build-arg "$ENV_VARIABLE" = "Value for execution"'
 		args ''
-        }
-    }
+		}
+	}
     stages {
         stage('build') {
             steps {
