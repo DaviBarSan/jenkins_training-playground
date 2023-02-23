@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                	def buildConfigs = ["config1":"alpine --version", "config2":"date"]
+                	def buildConfigs = ["name":"stage", "command":"node"]
                 	buildConfigs.each{ buildConfig ->
                 		sh "echo '$buildConfig.name' && $buildConfig.command"
 					}
