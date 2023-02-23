@@ -11,10 +11,13 @@ pipeline {
         stage('test'){
             script{
                 ${NUMBER_OF_ISSUES=10}
+            }
         }
     }
-    always{
+    post{
+        always{
         echo ${NUMBER_OF_ISSUES=10}
         }
     }
+    
 }
