@@ -13,7 +13,7 @@ pipeline {
     }
     post{
     	always{
-		archiveArtifacts artifacts: '/var/jenkins_home/workspace/usr3_workspace/051_archiveArtifact/googleHome.html'
+		archiveArtifacts artifacts: 'googleHome.html'
 	}
     }
 }
