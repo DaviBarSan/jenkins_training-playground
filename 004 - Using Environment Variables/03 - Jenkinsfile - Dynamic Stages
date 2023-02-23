@@ -10,7 +10,8 @@ pipeline {
                 script {
                 	def buildConfigs = readJSON text: '[{"name":"node", "command":"npm --version"}, {"name":"maven", "command":"echo We are on maven stage"}]'
                 	buildConfigs.each{ buildConfig ->
-                		sh "echo '$buildConfig.name' && $buildConfig.command"
+                		stage('$buildConfig.name')
+                            sh "$buildConfig.command"
 					}
                 }
             }
