@@ -13,8 +13,8 @@ pipeline {
                 ${NUMBER_OF_ISSUES=10}
         }
     }
-    }
     always{
         echo ${NUMBER_OF_ISSUES=10}
         }
+    }
 }
