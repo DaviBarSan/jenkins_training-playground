@@ -9,10 +9,10 @@ pipeline {
     }
     stages {
         stage('test'){
-            $NUMBER_OF_ISSUES=10
+            ${NUMBER_OF_ISSUES}=10
         }
     }
     always{
-        echo {$NUMBER_OF_ISSUES}
+        echo ${NUMBER_OF_ISSUES}
     }
 }
